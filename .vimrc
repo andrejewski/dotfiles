@@ -131,8 +131,8 @@ endfunction
 call LeaderCommands()
 
 function! ArrowKeys()
-  nmap <Left> <
-  nmap <Right> >
+  nmap <Left> <<
+  nmap <Right> >>
   nmap <Up> :m .-2<CR>==
   nmap <Down> :m .+1<CR>==
 

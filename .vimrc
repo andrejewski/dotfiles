@@ -47,7 +47,7 @@ filetype plugin indent on
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
-  if has("gui_macvim")
+  if has("gui_macvim") && has("gui_running")
     colorscheme yule
   else
     colorscheme 256-grayvim
@@ -126,6 +126,7 @@ function! LeaderCommands()
   nnoremap <Leader>f :%s/\s\+$//<CR>:noh<CR>
   nnoremap <Leader>d :set wrap<CR>:set linebreak<CR>
   nnoremap <Leader>n :NERDTreeToggle<CR>
+  nnoremap <Leader>N :NERDTreeFind<CR>
   nnoremap <Leader>/ :noh<CR>
 endfunction
 call LeaderCommands()
@@ -153,12 +154,33 @@ call vundle#begin()
   Plugin 'tpope/vim-commentary'
   Plugin 'justinmk/vim-sneak'
   Plugin 'scrooloose/nerdtree'
+  Plugin 'ctrlpvim/ctrlp.vim'
+
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'mustache/vim-mustache-handlebars'
 call vundle#end()
 
 " NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+function! SneakOneCharSearch()
+  nmap f <Plug>Sneak_f
+  nmap F <Plug>Sneak_F
+  xmap f <Plug>Sneak_f
+  xmap F <Plug>Sneak_F
+  omap f <Plug>Sneak_f
+  omap F <Plug>Sneak_F
+
+  nmap t <Plug>Sneak_t
+  nmap T <Plug>Sneak_T
+  xmap t <Plug>Sneak_t
+  xmap T <Plug>Sneak_T
+  omap t <Plug>Sneak_t
+  omap T <Plug>Sneak_T
+endfunction
+call SneakOneCharSearch()
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/node
@@ -187,6 +209,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
@@ -194,12 +217,13 @@ set undodir=~/.vim/undo//
 
 let g:mustache_abbreviations = 1
 let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }
 let g:loaded_syntastic_java_javac_checker = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
-" @chris - markdown > modula2
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufReadPost *.hbs set filetype=html.mustache syntax=html.mustache
 
 " /@chris
 

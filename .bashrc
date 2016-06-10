@@ -73,16 +73,6 @@ alias np='e package.json'
 alias dotfiles='defaults write com.apple.finder AppleShowAllFiles YES && killall Finder'
 alias notfiles='defaults write com.apple.finder AppleShowAllFiles NO && killall Finder'
 
-export WORK_DIR="$HOME/Desktop/Work"
-
-## local oss
-export LOCAL_OSS="$WORK_DIR/github-repos"
-export NODE_PATH="$LOCAL_OSS:$NODE_PATH"
-
-# private npm
-export LOCAL_NPM="$WORK_DIR/private-npm"
-export NODE_PATH="$LOCAL_NPM:$NODE_PATH"
-
 # @chris jekyll
 alias jks='o http://localhost:4000 && jekyll serve --watch'
 alias jkb='jekyll build'

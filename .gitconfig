@@ -2,11 +2,9 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
-
 [user]
 	name = Chris Andrejewski
 	email = christopher.andrejewski@gmail.com
-
 [alias]
   aa = add -A
   ai = add --interactive
@@ -21,6 +19,7 @@
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
   st = status -s
-
 [web]
 	brower = open
+[push]
+	default = simple

@@ -24,5 +24,5 @@ cd -
 
 # git
 brew install git bash-completion
-cp /.gitconfig ~/.gitconfig
+cp ./.gitconfig ~/.gitconfig
 

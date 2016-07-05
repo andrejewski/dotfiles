@@ -122,7 +122,7 @@ call NavTweaks()
 
 function! LeaderCommands()
   nnoremap <Leader>r :set relativenumber!<CR>
-  nnoremap <Leader>R :so $MYVIMRC<CR>
+  nnoremap <Leader>R :so $MYVIMRC<CR> :PluginInstall<CR>
   nnoremap <Leader>f :%s/\s\+$//<CR>:noh<CR>
   nnoremap <Leader>d :set wrap<CR>:set linebreak<CR>
   nnoremap <Leader>n :NERDTreeToggle<CR>
@@ -150,11 +150,13 @@ call vundle#begin()
   Plugin 'Valloric/YouCompleteMe'
   Plugin 'scrooloose/syntastic'
   Plugin 'gmarik/Vundle.vim'
+  Plugin 'tpope/vim-repeat'
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-commentary'
   Plugin 'justinmk/vim-sneak'
   Plugin 'scrooloose/nerdtree'
   Plugin 'ctrlpvim/ctrlp.vim'
+  Plugin 'rking/ag.vim'
 
   Plugin 'pangloss/vim-javascript'
   Plugin 'mustache/vim-mustache-handlebars'
@@ -215,6 +217,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
+" let g:ag_working_path_mode="r"
 let g:mustache_abbreviations = 1
 let g:syntastic_disabled_filetypes=['html']
 let g:syntastic_html_tidy_quiet_messages = { "level" : "warnings" }

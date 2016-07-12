@@ -21,15 +21,16 @@ export EDITOR='mvim'
 export BROWSER='google-chrome'
 
 # @chris aliases
-alias c='pwd'             # current directory
+alias a='atom'            # open atom editor
 alias b='cd -'            # back to last dir
+alias c='pwd'             # current directory
 alias D='d && d'          # go to ~/ then d $1
+alias e='$EDITOR'         # open in editor
+alias g='git'             # git shortcut
+alias k='clear'           # clear bash
 alias l='ls -GFh'         # pretty print ls
 alias L='l -a'            # pretty list all
 alias o='open'            # open in finder
-alias e='$EDITOR'         # open in editor
-alias g='git'             # git shortcut
-alias q='clear'           # clear bash
 
 alias md='mkdir -p'       # make directory
 alias mf='touch'          # make file
@@ -162,3 +163,6 @@ aq() {
   ag -Q "$@"
 }
 
+
+export NVM_DIR="/Users/chris.andrejewski/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

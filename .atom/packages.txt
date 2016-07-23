@@ -1,8 +1,0 @@
-editorconfig@1.4.1
-emmet@2.4.3
-linter@1.11.14
-linter-eslint@7.2.4
-sort-lines@0.14.0
-vim-mode-plus@0.46.0
-
-

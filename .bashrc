@@ -1,4 +1,3 @@
-
 PS1="λ:\W "
 ulimit -n 1024 # max open files
 
@@ -17,11 +16,10 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # @chris exports
-export EDITOR='mvim'
+export EDITOR='atom'
 export BROWSER='google-chrome'
 
 # @chris aliases
-alias a='atom'            # open atom editor
 alias b='cd -'            # back to last dir
 alias c='pwd'             # current directory
 alias D='d && d'          # go to ~/ then d $1
@@ -162,7 +160,6 @@ bo() {
 aq() {
   ag -Q "$@"
 }
-
 
 export NVM_DIR="/Users/chris.andrejewski/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

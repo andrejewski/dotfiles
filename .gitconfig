@@ -6,19 +6,20 @@
 	name = Chris Andrejewski
 	email = christopher.andrejewski@gmail.com
 [alias]
-  aa = add -A
+  aa = add --all
   ai = add --interactive
+	au = add --update
   br = branch
   cf = config --global
   cl = clone
-  cm = commit -m
+  cm = commit --message
   co = checkout
   dc = diff --cached
   lc = "!f() { git ll "$1"^.."$1"; }; f"
   lg = log --graph --oneline --decorate --all
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
-  st = status -s
+  st = status --short
 [web]
 	brower = open
 [push]

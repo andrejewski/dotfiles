@@ -157,6 +157,13 @@ bo() {
   ./$1
 }
 
+alias jc='find . -name "*.class" -delete'
+jo() {
+  find . -name '*.class' -delete
+  javac $1.java
+  java $1
+}
+
 aq() {
   ag -Q "$@"
 }

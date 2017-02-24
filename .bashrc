@@ -65,8 +65,16 @@ alias nid='yarn add --dev'
 alias nig='yarn global add'
 alias ns='Npm start'
 alias nt='Npm test'
-alias nr='Npm run'
 alias np='e package.json'
+
+# unalias 'nr' if `br` causes a syntax error
+nr() {
+  if [[ -z $1 ]] ; then
+    npm run
+  else
+    npm --silent run $@
+  fi
+}
 
 # @chris osx/finder
 alias dotfiles='defaults write com.apple.finder AppleShowAllFiles YES && killall Finder'
@@ -168,5 +176,4 @@ aq() {
   ag -Q "$@"
 }
 
-export NVM_DIR="/Users/chris.andrejewski/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="$HOME/.yarn/bin:$PATH" # This links yarn

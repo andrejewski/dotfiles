@@ -19,3 +19,4 @@ vim +PluginInstall +qall
 
 # git
 cp ./.gitconfig ~/.gitconfig
+cp ./.gitignore ~/.gitignore

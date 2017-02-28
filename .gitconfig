@@ -27,3 +27,5 @@
 	brower = open
 [push]
 	default = simple
+[core]
+	excludesfile = ~/.gitignore

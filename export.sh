@@ -13,3 +13,4 @@ cp ~/.vim/colors/256-grayvim.vim ./.vim/colors/256-grayvim.vim
 
 # git
 cp ~/.gitconfig ./.gitconfig
+cp ~/.gitignore ./.gitignore

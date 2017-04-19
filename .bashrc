@@ -37,8 +37,6 @@ alias rd='rmdir'          # remove directory
 alias rf='rm'             # remove file
 alias rr='rm -rf'         # remove all
 
-alias ve='e ~/.vimrc'     # .vimrc edit
-alias ee='e ~/.emacs'     # .emacs edit
 alias ge='e ~/.gitconfig' # .gitconfig edit
 
 alias be='e ~/.bashrc'    # .bashrc edit
@@ -48,14 +46,7 @@ alias ux='chmod u+x'      # make executable
 
 alias caf='caffeinate'    # spelling is hard
 
-alias mg='mongod'
-alias rs='redis-server'
 alias hs='http-server'
-
-# emacs
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-# vim
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 
 # @chris nodejs/npm
 alias Npm='npm --silent'
@@ -160,20 +151,11 @@ co() {
   ./$1
 }
 
-bo() {
-  c++ $1.cpp -o $1 $(pkg-config --libs tesseract lept opencv3)
-  ./$1
-}
-
 alias jc='find . -name "*.class" -delete'
 jo() {
   find . -name '*.class' -delete
   javac $1.java
   java $1
-}
-
-aq() {
-  ag -Q "$@"
 }
 
 export PATH="$HOME/.yarn/bin:$PATH" # This links yarn

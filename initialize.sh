@@ -28,9 +28,8 @@ brew_list=(
   ag
   curl
   node
-  nvm
+  yarn
   watchman
-  macvim
 
   postgres
   mongodb
@@ -44,19 +43,21 @@ i 'Cask tools'
 
 cask_list=(
   atom
+  firefox
   github-desktop
   google-chrome
   google-chrome-canary
+  hyper
+  sketch
 )
 
 brew cask install --appdir="/Applications" ${cask_list[@]}
 
-i 'Node'
+i 'Node tools'
 
 node_list=(
-  fixpack
+  n
   http-server
-  nodemon
 )
 
 npm install --global ${node_list[@]}

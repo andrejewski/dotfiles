@@ -6,17 +6,6 @@ cp ./.bashrc ~/.bashrc
 cp ./.bash_profile ~/.bash_profile
 source ~/.bashrc
 
-# vim
-cp ./.vimrc ~/.vimrc
-
-mkdir -p ~/.vim/colors
-cp ./.vim/colors/yule.vim ~/.vim/colors/yule.vim
-cp ./.vim/colors/256-grayvim.vim ~/.vim/colors/256-grayvim.vim
-
-mkdir -p ~/.vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
 # git
 cp ./.gitconfig ~/.gitconfig
 cp ./.gitignore ~/.gitignore

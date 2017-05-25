@@ -1,6 +1,7 @@
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
 [user]
 	name = Chris Andrejewski
@@ -27,5 +28,7 @@
 	brower = open
 [push]
 	default = simple
+	followTags = true
 [core]
 	excludesfile = ~/.gitignore
+	autocrlf = input

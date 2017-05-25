@@ -1,5 +1,5 @@
-PS1="λ:\W "
-ulimit -n 1024 # max open files
+PS1="\e[96m\e[1m\w\e[0m\n\e[95m>\e[0m "
+ulimit -n 2048 # max open files
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -12,7 +12,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   GIT_PS1_SHOWSTASHSTATE=true
   GIT_PS1_SHOWUNTRACKEDFILES=true
   GIT_PS1_STATESEPARATOR=''
-  PS1="λ\$(__git_ps1 '(%s)'):\W "
+  PS1="\e[96m\e[1m\w\e[0m\$(__git_ps1 ' \e[92m%s\e[0m')\n\e[95m>\e[0m "
 fi
 
 # @chris exports
@@ -159,3 +159,6 @@ jo() {
 }
 
 export PATH="$HOME/.yarn/bin:$PATH" # This links yarn
+
+# added by travis gem
+[ -f /Users/chrisandrejewski/.travis/travis.sh ] && source /Users/chrisandrejewski/.travis/travis.sh

@@ -1,4 +1,4 @@
-PS1="\e[96m\e[1m\w\e[0m\n\e[95m>\e[0m "
+PS1="\[\e[96m\]\[\e[1m\]\w\[\e[0m\]\n\[\e[95m\]>\[\e[0m\] "
 ulimit -n 2048 # max open files
 
 # Load RVM into a shell session *as a function*
@@ -12,7 +12,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   GIT_PS1_SHOWSTASHSTATE=true
   GIT_PS1_SHOWUNTRACKEDFILES=true
   GIT_PS1_STATESEPARATOR=''
-  PS1="\e[96m\e[1m\w\e[0m\$(__git_ps1 ' \e[92m%s\e[0m')\n\e[95m>\e[0m "
+  PS1="\[\e[96m\]\[\e[1m\]\w\[\e[0m\]\$(__git_ps1 ' \[\e[92m\]%s\[\e[0m\]')\n\[\e[95m\]>\[\e[0m\] "
 fi
 
 # @chris exports

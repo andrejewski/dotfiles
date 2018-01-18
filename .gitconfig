@@ -1,8 +1,8 @@
 [filter "lfs"]
+	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
 [user]
 	name = Chris Andrejewski
 	email = christopher.andrejewski@gmail.com
@@ -12,7 +12,7 @@
 	ac = add --update
 	au = !git add $(git ls-files -o --exclude-standard)
 	br = branch
-	ca = commit --amend
+	ca = commit --amend --no-edit
 	cf = config --global
 	cl = clone
 	cm = commit --message

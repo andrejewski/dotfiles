@@ -160,5 +160,9 @@ jo() {
 
 export PATH="$HOME/.yarn/bin:$PATH" # This links yarn
 
+kill-port() {
+  kill $(lsof -t -i:$1)
+}
+
 # added by travis gem
 [ -f /Users/chrisandrejewski/.travis/travis.sh ] && source /Users/chrisandrejewski/.travis/travis.sh

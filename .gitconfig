@@ -17,6 +17,7 @@
 	cl = clone
 	cm = commit --message
 	co = checkout
+	com = checkout master
 	dc = diff --cached
 	fp = !git fetch && git pull
 	lc = "!f() { git ll "$1"^.."$1"; }; f"

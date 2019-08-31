@@ -24,6 +24,7 @@
 	lg = log --graph --oneline --decorate --all
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	rom = pull --rebase origin master
 	st = status --short
 [web]
 	brower = open

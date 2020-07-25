@@ -8,26 +8,25 @@
 	email = christopher.andrejewski@gmail.com
 [alias]
 	aa = add --all
-	ai = add --interactive
 	ac = add --update
 	au = !git add $(git ls-files -o --exclude-standard)
 	br = branch
 	ca = commit --amend --no-edit
-	cf = config --global
 	cl = clone
 	cm = commit --message
 	co = checkout
 	com = checkout master
 	dc = diff --cached
 	fp = !git fetch && git pull
-	lc = "!f() { git ll "$1"^.."$1"; }; f"
-	lg = log --graph --oneline --decorate --all
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 	rom = pull --rebase origin master
+	rsh = reset --soft HEAD^
 	st = status --short
 [web]
 	brower = open
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
 [push]
 	default = simple
 	followTags = true

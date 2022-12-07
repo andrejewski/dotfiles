@@ -10,7 +10,7 @@
 	aa = add --all
 	ac = add --update
 	au = !git add $(git ls-files -o --exclude-standard)
-	br = branch
+	br = branch --sort=-committerdate
 	ca = commit --amend --no-edit
 	cl = clone
 	cm = commit --message
